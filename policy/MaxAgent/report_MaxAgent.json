@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "report:*"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:application:us-west-2:application:report_MaxAgent"
+            ]
+        }
+    ]
+}
