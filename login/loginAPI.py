@@ -53,21 +53,14 @@ def login(btnName, agentName):
             listPolicy.append(getPolicyName)
 
         # ----------------------------get role policy---------------------------------------
-       customerRole = securityConfig.customerRole
-        staffRole = securityConfig.staffRole
-        managerRole = securityConfig.managerRole
+       gettrue =getGroup+'_'+clickAgentBehavior
+        print(gettrue)
         
-        if getGroup == 'customer':
-            roleNameForPolicy = customerRole
-        elif getGroup =='staff':
-            roleNameForPolicy = staffRole
-        else:
-            roleNameForPolicy = managerRole
-        print(roleNameForPolicy)
         response = client.list_attached_role_policies(
-            RoleName=roleNameForPolicy+'_'+clickAgentBehavior,
+            RoleName=gettrue,
             MaxItems=123
         )
+        print(response)
 
         # -------------------------get role policy-------------------------------------------------
 
